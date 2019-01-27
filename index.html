@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Waitstaff Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>Waitstaff Calculator</header>
+  <main class="Calculator">
+    <section class="enter-meal-detail">
+      <form class="entry js-entry">
+        <!-- meal detail data entry -->
+        <label for="base">Base Meal Price</label>
+        $<input type="number" class="base js-base" placeholder="9.99">
+        <label for="tax">Tax Rate</label>
+        <input type="number" class="tax js-tax" placeholder="8">%
+        <label for="tip">Tip %</label>
+        <input type="number" class="tip js-tip" placeholder="18">%
+        <!-- data submission controls -->
+        <section class="entry-controls js-entry-controls">
+          <input type="submit" class="submit-button js-submit">
+          <input type="button" class="cancel-button js-cancel">Cancel
+        </section>
+      </form>
+    </section>
+    <!-- subtotal, tip, computed total display -->
+    <section class="charges js-charges">
+      <span class="subtotal js-subtotal"></span>
+      <span class="tip js-tip"></span>
+      <span class="total js-total"></span>
+    </section>
+    <!-- tip total, meal count total, avg tip per meal display -->
+    <section class="earnings js-earnings">
+      <span class="tip-total js-tip-total"></span>
+      <span class="meal-count js-meal-count"></span>
+      <span class="average-tip js-average-tip"></span>
+    </section>
+    <input type="button" class="reset js-reset">Reset
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
