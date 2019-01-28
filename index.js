@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 /* global $ */
 
@@ -94,7 +95,9 @@ function handleSubmit() {
 }
 
 function getEntry() {
-
+  STORE.mealDetails.base = $('.js-base').val();
+  STORE.mealDetails.tax = $('.js-tax').val();
+  STORE.mealDetails.pctTip = $('.js-pct-tip').val();
 }
 
 function updateLedger() {
@@ -117,6 +120,28 @@ function handleCancel() {
 
 function clearEntry() {
   //select text fields and clear values
+}
+
+function handleReset() {
+  clearEntry();
+  resetSTORE();
+  render();
+}
+
+function resetSTORE() {
+  STORE.mealDetails = {
+    base: 0,
+    tax: 10,
+    pctTip: 18
+  };
+  STORE.ledger = {
+    subtotal: 0,
+    tip: 0,
+    total: 0,
+    tipTotal: 0,
+    mealCount: 0,
+    avgTip: 0
+  };
 }
 
 function calculateSubtotal() {
@@ -144,6 +169,7 @@ function calculateAvgTipPerMeal() {
 function handleWaitstaffCalculation() {
   handleSubmit();
   handleCancel();
+  handleReset();
   render();
 }
 
