@@ -10,35 +10,7 @@
 </head>
 <body>
   <header>Waitstaff Calculator</header>
-  <main class="Calculator">
-    <section class="enter-meal-detail">
-      <form class="entry js-entry">
-        <!-- meal detail data entry -->
-        <label for="base">Base Meal Price</label>
-        $<input type="number" class="base js-base" placeholder="9.99">
-        <label for="tax">Tax Rate</label>
-        <input type="number" class="tax js-tax" placeholder="8">%
-        <label for="tip">Tip %</label>
-        <input type="number" class="tip js-tip" placeholder="18">%
-        <!-- data submission controls -->
-        <section class="entry-controls js-entry-controls">
-          <input type="submit" class="submit-button js-submit">
-          <input type="button" class="cancel-button js-cancel">Cancel
-        </section>
-      </form>
-    </section>
-    <!-- subtotal, tip, computed total display -->
-    <section class="charges js-charges">
-      <span class="subtotal js-subtotal"></span>
-      <span class="tip js-tip"></span>
-      <span class="total js-total"></span>
-    </section>
-    <!-- tip total, meal count total, avg tip per meal display -->
-    <section class="earnings js-earnings">
-      <span class="tip-total js-tip-total"></span>
-      <span class="meal-count js-meal-count"></span>
-      <span class="average-tip js-average-tip"></span>
-    </section>
+  <main class="calculator">
     <input type="button" class="reset js-reset">Reset
   </main>
   <script src="index.js"></script>
